@@ -14,7 +14,10 @@ get "sign_up" => "users#new", :as => "sign_up"
 root :to => "welcome#new"
 resources :users
 resources :sessions
-get 'schedule' => "schedules#new", :as =>"schedule"
+get 'schedule' => "event_schedules#new", :as =>"schedule"
+post 'schedule' => 'event_schedules#create', :as =>"schedule_creates"
+  get "schedule/list" => "event_schedules#index", :as => 'schedule_list'
+
 # get 'welcome/new' => "welcome#new"
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

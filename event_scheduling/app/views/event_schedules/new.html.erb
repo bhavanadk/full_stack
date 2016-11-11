@@ -1,16 +1,7 @@
-<h1>Event list</h1>
-
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<h1 align="center">Event list</h1>
+<center>
+<%= form_for :schedule do |f| %>
+ 
    <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -36,9 +27,9 @@
     <%= f.password_field :invitees %>
   </p>
    <p>
-    <%= f.label :status %><br />
-    <%= f.password_field :status %>
+   <%= f.select :status, ['open', 'closed']%>
   </p>
 
   <p class="button"><%= f.submit %></p>
 <% end %>
+</center>
