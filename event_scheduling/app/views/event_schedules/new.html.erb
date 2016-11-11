@@ -1,0 +1,44 @@
+<h1>Event list</h1>
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+   <p>
+    <%= f.label :venue %><br />
+    <%= f.text_field :venue %>
+  </p>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </p>
+  <p>
+    <%= f.label :time %><br />
+    <%= f.text_field :time %>
+  </p>
+   <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+   <p>
+    <%= f.label :invitees %><br />
+    <%= f.password_field :invitees %>
+  </p>
+   <p>
+    <%= f.label :status %><br />
+    <%= f.password_field :status %>
+  </p>
+
+  <p class="button"><%= f.submit %></p>
+<% end %>

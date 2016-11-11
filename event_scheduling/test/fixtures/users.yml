@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstname: MyString
+  lastname: MyString
+  username: MyString
+  email: MyString
+  ph_no: MyString
+  password_hash: MyString
+  password_salt: MyString
+  password_confirmation_hash: MyString
+  password_confirmation_salt: MyString
+
+two:
+  firstname: MyString
+  lastname: MyString
+  username: MyString
+  email: MyString
+  ph_no: MyString
+  password_hash: MyString
+  password_salt: MyString
+  password_confirmation_hash: MyString
+  password_confirmation_salt: MyString

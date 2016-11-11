@@ -1,0 +1,2 @@
+class EventSchedulesController < ApplicationController
+end
