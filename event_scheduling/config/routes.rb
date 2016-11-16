@@ -12,13 +12,17 @@ get "log_out" => "sessions#destroy", :as => "log_out"
 get "log_in" => "sessions#new", :as => "log_in"
 get "sign_up" => "users#new", :as => "sign_up"
 root :to => "welcome#new"
-resources :users
 resources :sessions
+resources :users do
+resources :event_schedules
+end
 get 'schedule' => "event_schedules#new", :as =>"schedule"
 post 'schedule' => 'event_schedules#create', :as =>"schedule_creates"
   get "schedule/list" => "event_schedules#index", :as => 'schedule_list'
+get 'schedule/:id/edit' => "event_schedules#edit", :as =>'schedule_edit'
 
-# get 'welcome/new' => "welcome#new"
+put 'schedule/:id/edit' => "event_schedules#update", :as =>'schedule_update'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
